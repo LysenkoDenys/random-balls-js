@@ -49,6 +49,12 @@ body {
   border: solid 0.1px black;
   cursor: pointer;
   transition: transform 0.3s ease-in-out; /* CSS transition for scaling */
+  /* background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 25%,
+    yellow 100%
+  ); */
 }
 
 .ball:hover {

@@ -8,11 +8,6 @@
 // console.log(Math.random()); //0.24059282675210358
 // console.log(Math.floor(Math.random() * 10) + 1); //5  from 1 to 10
 
-// PLAN:
-// 1. create 100 circles with R=100px;
-//* 2. create 16 different colors to colored them;
-// 3. create 100 different places on the screen to place them;
-
 const wrapper = document.querySelector('.wrapper');
 
 const btn = document.getElementById('gen');
@@ -55,7 +50,12 @@ function circleGenerator() {
     const randomTop = Math.floor(Math.random() * 100); // from 0 to 99
     const randomLeft = Math.floor(Math.random() * 100); // from 0 to 99
 
-    ball.style.cssText = `background-color:${colors2paint[randomColor]}; top: ${randomTop}%; left: ${randomLeft}%`;
+    ball.style.cssText = `background-color:${colors2paint[randomColor]}; top: ${randomTop}%; left: ${randomLeft}%; background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 15%,
+      ${colors2paint[randomColor]} 100%
+    );`;
     wrapper.append(ball);
   }
 }
