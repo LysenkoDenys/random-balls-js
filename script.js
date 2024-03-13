@@ -9,7 +9,6 @@
 // console.log(Math.floor(Math.random() * 10) + 1); //5  from 1 to 10
 
 const wrapper = document.querySelector('.wrapper');
-
 const btn = document.getElementById('gen');
 btn.addEventListener('click', circleGenerator);
 
@@ -18,7 +17,7 @@ const colors2paint = [
   'red',
   'blue',
   'green',
-  'black',
+  'silver',
   'yellow',
   'chartreuse',
   'chocolate',
@@ -31,7 +30,17 @@ const colors2paint = [
   'cadetblue',
   'silver',
   'olive',
+  'fuchsia',
+  'purple',
+  'teal',
+  'aqua',
+  'tomato',
+  'wheat',
 ];
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 function circleGenerator() {
   if (document.querySelector('.ball')) {
@@ -46,9 +55,9 @@ function circleGenerator() {
   for (let i = 0; i <= circlesAmount; i++) {
     const ball = document.createElement('div');
     ball.setAttribute('class', 'ball');
-    const randomColor = Math.floor(Math.random() * 16); // from 0 to 15
-    const randomTop = Math.floor(Math.random() * 100); // from 0 to 99
-    const randomLeft = Math.floor(Math.random() * 100); // from 0 to 99
+    const randomColor = getRandomInt(0, colors2paint.length - 1);
+    const randomTop = getRandomInt(0, 100); // from 0 to 100%
+    const randomLeft = getRandomInt(0, 100); // from 0 to 100%
 
     ball.style.cssText = `background-color:${colors2paint[randomColor]}; top: ${randomTop}%; left: ${randomLeft}%; background: linear-gradient(
       90deg,

@@ -10,6 +10,7 @@ body {
   color: white;
   background-color: #50644d;
   user-select: none;
+  overflow: hidden; // necessary to hide scrollbars
 }
 
 .wrapper {
