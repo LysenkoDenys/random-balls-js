@@ -28,7 +28,7 @@ const colors2paint = [
   'indigo',
   'springgreen',
   'cadetblue',
-  'silver',
+  'lime',
   'olive',
   'fuchsia',
   'purple',
@@ -36,6 +36,11 @@ const colors2paint = [
   'aqua',
   'tomato',
   'wheat',
+  'white',
+  'aquamarine',
+  'lavenderblush',
+  'lightgoldenrodyellow',
+  'turquoise',
 ];
 
 function getRandomInt(min, max) {
